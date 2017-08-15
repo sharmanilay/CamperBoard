@@ -1,0 +1,26 @@
+{
+  "name": "camperboard",
+  "version": "1.0.0",
+  "description": "Free code camp project",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack -d --watch",
+    "build": "webpack",
+    "serve": "serve ./public"
+  },
+  "author": "Nilay Sharma",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "serve": "^6.0.6",
+    "webpack": "^3.5.3"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-icons": "^2.2.5"
+  }
+}
