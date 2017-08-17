@@ -40,8 +40,49 @@ class Body extends Component {
 			url: this.props.aiproot+"top/"+this.state.column,
 			dataType: 'json',
 			cache: false,
-			su
-		})
+			success: function(data) {
+				var users = data;
+				this.setState({users: users});
+			}.bind(this),
+		});
+	}
+	componentDidMount() {
+		this.getData();
+	}
+	render() {
+		return (
+			<div className="container">
+				<div className="row">
+					<div className="col-lg-12">
+						<div id="header">
+							<h3>Leaderboard</h3>
+						</div>
+					</div>
+				</div>
+				<div className="row">
+					<div className="col-lg-12">
+						<Leaderboard 
+							users={this.state.users}
+							apiroot={this.props/apiroot}
+							updatePage={this.getData.bind(this)}
+							sortTableNum={this.sortTableNum.bind(this)}
+						/>
+					</div>
+				</div>
+			</div>
+		);
+	}
+	removeSortClasses() {
+		var nodes = document.getElementByClassName('sortable');
+
+		for (var i=0; i<nodes.length; i++) {
+			nodes.item(i).className = "sortable";
+		};
+	}
+	sortTableNum(column) {
+		if (column !== this.state.column) {
+			this.setState({reverse: true, column: column}, this.getData);
+		}
 	}
 }
 
@@ -49,6 +90,7 @@ class Application extends Component {
 	render() {
 		return <div>
 			<Header />
+			<Body apiroot={this.props.apiroot} />
 			<Footer />
 			</div>;
 	}
