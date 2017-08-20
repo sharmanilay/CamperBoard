@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Free code camp project",
   "main": "index.js",
+  "homepage":"https://sharmanilay.github.io/CamperBoard",
   "scripts": {
     "watch": "webpack -d --watch",
     "build": "webpack",
