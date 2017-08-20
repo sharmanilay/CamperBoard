@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Free code camp project",
   "main": "index.js",
+  "homepage":"https://sharmanilay.github.io/CamperBoard",
   "scripts": {
     "watch": "webpack -d --watch",
     "build": "webpack",
@@ -19,6 +20,7 @@
     "webpack": "^3.5.3"
   },
   "dependencies": {
+    "jquery": "^3.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-icons": "^2.2.5"

@@ -4,23 +4,27 @@ html, body {
 }
 
 body {
-  background-color: #939393;
+  background-color:#aeb6bf;
   color: #f5f5f5;
   font-family: "Lato", sans-serif;
 }
 
 header {
-  margin-bottom: 30px;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  text-align: center;
 }
 
 header, footer {
-  background-color: #006400;
-  color: #eeeeee;
-  height: 50px;
+  background-color: #191919;
+  color: #f1f1f1;
+  height: 10%;
   width: 100%;
 }
 
 footer {
+  margin-bottom: 0;
+  padding-bottom: 0.5%;
   text-align: center;
   padding-top: 5px;
   font-size: 18px;
@@ -92,6 +96,7 @@ th a, th a:hover {
 }
 
 tr.top100 td {
+  padding-left: 6%;
   vertical-align: middle;
 }
 
