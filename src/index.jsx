@@ -28,7 +28,11 @@ class Footer extends Component {
 		return (
 		<footer>
 			<div className="container">
-				<p>By Nilay Shrarma  <a href="https://www.facebook.com/nilay.sharma.31"><FaFacebookSquare /><FaGithubSquare /></a></p>
+				<p>
+				By Nilay Shrarma
+				<a href="https://www.facebook.com/nilay.sharma.31"><FaFacebookSquare /></a>
+				<a href="https://github.com/sharmanilay"><FaGithubSquare /></a>
+				</p>
 			</div>
 		</footer>
 		);
@@ -43,7 +47,7 @@ class ColumnHeadings extends Component {
     return (
       <thead>
       <tr id="colheaders" className="top100">
-        <th style="text-align"className="idcol">#</th>
+        <th className="idcol">#</th>
         <th>Camper Name</th> 
         <th id="defaultsort" className="sortable sorted true" onClick={this.handleClickNum.bind(this, "recent")}>Points in past 30 days</th>
         <th className="sortable" onClick={this.handleClickNum.bind(this, "alltime")}>All time points </th>
@@ -119,6 +123,7 @@ class Leaderboard extends Component {
             {userlist}
           </tbody>
       </table>
+      
     );
   }
 }
